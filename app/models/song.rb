@@ -3,4 +3,7 @@ class Song < ActiveRecord::Base
   belongs_to :genre
   has_many :notes
 
+  validates :title, :artist_id, :genre_id, presence: true
+  validates :title, uniqueness: { scope: [:artist_id]}
+
 end
