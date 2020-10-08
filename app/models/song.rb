@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
   validates :title, {presence: true, uniqueness: { scope: [:artist_id]}}
 
   def artist_name=(artist_name)
-    self.artist = Artist.find_or_create_by_name(artist_name)
+    self.artist = Artist.find_or_create_by_name(name: artist_name)
   end
 
   def artist_name
