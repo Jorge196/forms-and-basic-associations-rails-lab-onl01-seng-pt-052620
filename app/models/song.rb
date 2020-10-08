@@ -9,12 +9,12 @@ class Song < ActiveRecord::Base
   validates :artist_id, :genre_id, {presence: true}
   validates :title, {presence: true, uniqueness: { scope: [:artist_id]}}
 
-  def artist_name(artist_name)
+  def artist_name=(artist_name)
     @artist_name = artist_name
   end
 
   def artist_name
     @artist_name
-  end 
+  end
 
 end
