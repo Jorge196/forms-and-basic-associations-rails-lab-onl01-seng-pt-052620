@@ -29,7 +29,7 @@ class Song < ActiveRecord::Base
   end
 
   def notes_2=(note)
-    @
+
   end
 
 end
