@@ -17,19 +17,19 @@ class Song < ActiveRecord::Base
     self.artist.try(:name)
   end
 
-  def notes_1
+  def note_1
     self.notes.first.try(:content)
   end
 
-  def notes_1=(content)
+  def note_1=(content)
     @note_1 = self.notes.build(content: content)
   end
 
-  def notes_2
+  def note_2
     self.notes.last.try(:content)
   end
 
-  def notes_2=(content)
+  def note_2=(content)
       @note_2 = self.notes.build(content: content)
   end
 
