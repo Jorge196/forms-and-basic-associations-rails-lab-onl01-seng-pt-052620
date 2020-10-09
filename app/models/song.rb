@@ -22,7 +22,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_1=(content)
-    @note_1 = self.note.build(content: content)
+    @note_1 = self.notes.build(content: content)
   end
 
   def note_2
@@ -30,12 +30,12 @@ class Song < ActiveRecord::Base
   end
 
   def note_2=(content)
-      @note_2 = self.note.build(content: content)
+      @note_2 = self.notes.build(content: content)
   end
 
   def note_contents=(notes_content)
-    note_contents.each do |note_content|
-      self.note.build(content: note_content)
+    notes_content.each do |note_content|
+      self.notes.build(content: note_content)
     end
   end
 end
