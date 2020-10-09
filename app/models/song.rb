@@ -21,14 +21,15 @@ class Song < ActiveRecord::Base
 
   end
 
-  def notes_1=(note)
-    @note_1 = note
+  def notes_1=(content)
+    @note_1 = self.notes.build(content: content)
   end
 
   def notes_2
   end
 
   def notes_2=(note)
+      @note_2 = self.notes.build(content: content)
 
   end
 
