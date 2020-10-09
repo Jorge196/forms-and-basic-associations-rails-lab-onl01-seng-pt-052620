@@ -18,7 +18,7 @@ class Song < ActiveRecord::Base
   end
 
   def notes_1
-
+    self.notes.first.try(:content)
   end
 
   def notes_1=(content)
@@ -26,11 +26,11 @@ class Song < ActiveRecord::Base
   end
 
   def notes_2
+    self.notes.last.try(:content)
   end
 
-  def notes_2=(note)
+  def notes_2=(content)
       @note_2 = self.notes.build(content: content)
-
   end
 
 end
