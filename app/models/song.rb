@@ -17,4 +17,10 @@ class Song < ActiveRecord::Base
     self.artist.try(:name)
   end
 
+  def notes_1
+  end
+
+  def notes_2
+  end 
+
 end
