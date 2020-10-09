@@ -33,4 +33,9 @@ class Song < ActiveRecord::Base
       @note_2 = self.notes.build(content: content)
   end
 
+  def note_contents=(notes_content)
+    notes_contents.each do |note_content|
+      self.notes.build(content: note_content)
+    end
+  end
 end
