@@ -18,9 +18,18 @@ class Song < ActiveRecord::Base
   end
 
   def notes_1
+
+  end
+
+  def notes_1=(note)
+    @note_1 = note
   end
 
   def notes_2
-  end 
+  end
+
+  def notes_2=(note)
+    @
+  end
 
 end
