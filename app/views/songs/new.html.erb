@@ -13,9 +13,9 @@
 
   <p>Song Notes</p>
   <!-- <p>
-    <%= f.text_field :notes_1 %>
+    <%= f.text_field :note_1, id: 'song_note_1' %>
   </br>
-  <%= f.text_field :notes_2 %>
+  <%= f.text_field :note_2, id:'song_note_2'  %>
   </p> -->
   <p>
     <%= text_field_tag :'song[note_contents][]', @song.note_1, id: 'song_note_1' %>
