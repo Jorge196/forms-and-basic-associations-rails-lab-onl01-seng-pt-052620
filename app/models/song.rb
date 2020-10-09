@@ -26,7 +26,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_2
-    self.note.last.try(:content)
+    self.notes.last.try(:content)
   end
 
   def note_2=(content)
