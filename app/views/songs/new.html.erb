@@ -11,6 +11,13 @@
   <%= f.collection_select(:genre_id, Genre.all, :id, :name, prompt: true) %>
   <br />
 
+  <p>Song Notes</p>
+  <p>
+    <%= f.text_field :notes_1 %>
+  </br>
+  <%= f.text_field :notes_2 %>
+  </p>
+
 
   <%= f.submit %>
 <% end %>
