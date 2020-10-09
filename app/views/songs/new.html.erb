@@ -12,11 +12,18 @@
   <br />
 
   <p>Song Notes</p>
-  <p>
+  <!-- <p>
     <%= f.text_field :notes_1 %>
   </br>
   <%= f.text_field :notes_2 %>
+  </p> -->
+  <p>
+    <%= text_field_tag :'song[note_contents][]', @song.note_1, id: 'song_note_1' %>
   </p>
+  <p>
+    <%= text_field_tag :'song[note_contents][]', @song.note_2, id: 'song_note_2' %>
+  </p>
+
 
 
   <%= f.submit %>
